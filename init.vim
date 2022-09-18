@@ -1,11 +1,13 @@
 call plug#begin()
+Plug 'leafOfTree/vim-vue-plugin'
+Plug 'folke/which-key.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'numToStr/Comment.nvim'
-Plug 'Galooshi/vim-import-js'
+Plug 'vim-autoformat/vim-autoformat'
 Plug 'skywind3000/vim-terminal-help'
 Plug 'aperezdc/vim-template'
-Plug 'vim-autoformat/vim-autoformat'
 Plug 'itchyny/lightline.vim'
+Plug 'Galooshi/vim-import-js'
 Plug 'alvan/vim-closetag'
 Plug 'junegunn/fzf.vim'
 Plug 'othree/html5.vim'
@@ -13,6 +15,8 @@ Plug 'sickill/vim-monokai'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 call plug#end()
 lua require('Comment').setup()
 
@@ -21,25 +25,25 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 inoremap <silent><expr> <TAB>
-			\ coc#pum#visible() ? coc#pum#next(1) :
-			\ CheckBackspace() ? "\<Tab>" :
-			\ coc#refresh()
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-			\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 if has('nvim')
-	inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <silent><expr> <c-space> coc#refresh()
 else
-	inoremap <silent><expr> <c-@> coc#refresh()
+  inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
 nmap <silent> gd <Plug>(coc-definition)
@@ -106,10 +110,34 @@ let g:coc_snippet_next = '<tab>'
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
-noremap <F4> :Autoformat<CR>
 nnoremap <silent><F3> :call GuiShowContextMenu()<CR>
 inoremap <silent><F3> <Esc>:call GuiShowContextMenu()<CR>
 vnoremap <silent><F3> :call GuiShowContextMenu()<CR>
 
-set autoindent expandtab tabstop=2 shiftwidth=2
 
+noremap <F3> :Autoformat<CR>
+
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+lua << EOF
+  require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
+
+let g:startify_bookmarks = [
+  \ { 'z': '~/.zshrc' },
+  \ { 'v': '~/.config/nvim/init.vim' },
+  \ { 'w': '/tmp/vimwiki' },
+  \ ]
+
+let g:startify_lists = [
+      \ { 'header': ['   Bookmarks'],       'type': 'bookmarks' },
+      \ { 'header': ['   MRU'],            'type': 'files' },
+      \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
+      \ ]

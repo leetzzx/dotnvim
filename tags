@@ -1,0 +1,68 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/leetz/.config/nvim/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+0	coc-settings.json	/^      "args": ["--lsp"],$/;"	s	array:languageserver.haskell.args
+0	coc-settings.json	/^      "filetypes": ["haskell", "lhaskell"]$/;"	s	array:languageserver.haskell.filetypes
+0	coc-settings.json	/^      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],$/;"	s	array:languageserver.haskell.rootPatterns
+1	coc-settings.json	/^      "filetypes": ["haskell", "lhaskell"]$/;"	s	array:languageserver.haskell.filetypes
+1	coc-settings.json	/^      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],$/;"	s	array:languageserver.haskell.rootPatterns
+2	coc-settings.json	/^      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],$/;"	s	array:languageserver.haskell.rootPatterns
+3	coc-settings.json	/^      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],$/;"	s	array:languageserver.haskell.rootPatterns
+4	coc-settings.json	/^      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],$/;"	s	array:languageserver.haskell.rootPatterns
+<A-0>	init.vim	/^nnoremap <A-0> 10gt$/;"	m
+<A-1>	init.vim	/^nnoremap <A-1> 1gt$/;"	m
+<A-2>	init.vim	/^nnoremap <A-2> 2gt$/;"	m
+<A-3>	init.vim	/^nnoremap <A-3> 3gt$/;"	m
+<A-4>	init.vim	/^nnoremap <A-4> 4gt$/;"	m
+<A-5>	init.vim	/^nnoremap <A-5> 5gt$/;"	m
+<A-6>	init.vim	/^nnoremap <A-6> 6gt$/;"	m
+<A-7>	init.vim	/^nnoremap <A-7> 7gt$/;"	m
+<A-8>	init.vim	/^nnoremap <A-8> 8gt$/;"	m
+<A-9>	init.vim	/^nnoremap <A-9> 9gt$/;"	m
+<C-f>	init.vim	/^nnoremap <C-f> :NERDTreeFind<CR>$/;"	m
+<C-j>	init.vim	/^imap <C-j> <Plug>(coc-snippets-expand-jump)$/;"	m
+<C-j>	init.vim	/^vmap <C-j> <Plug>(coc-snippets-select)$/;"	m
+<C-l>	init.vim	/^imap <C-l> <Plug>(coc-snippets-expand)$/;"	m
+<C-n>	init.vim	/^nnoremap <C-n> :NERDTree<CR>$/;"	m
+<C-t>	init.vim	/^nnoremap <C-t> :NERDTreeToggle<CR>$/;"	m
+<CR>	init.vim	/^inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()$/;"	m
+<F3>	init.vim	/^inoremap <silent><F3> <Esc>:call GuiShowContextMenu()<CR>$/;"	m
+<F3>	init.vim	/^nnoremap <silent><F3> :call GuiShowContextMenu()<CR>$/;"	m
+<F3>	init.vim	/^noremap <F3> :Autoformat<CR>$/;"	m
+<F3>	init.vim	/^vnoremap <silent><F3> :call GuiShowContextMenu()<CR>$/;"	m
+<S-TAB>	init.vim	/^inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\\<C-h>"$/;"	m
+<TAB>	init.vim	/^inoremap <silent><expr> <TAB>$/;"	m
+<c-@>	init.vim	/^  inoremap <silent><expr> <c-@> coc#refresh()$/;"	m
+<c-space>	init.vim	/^  inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
+<leader><enter>	init.vim	/^nnoremap <leader><enter>  :set hlsearch!<CR>$/;"	m
+<leader>b	init.vim	/^nnoremap <leader>b :Buffers<CR>$/;"	m
+<leader>f	init.vim	/^nnoremap <leader>f :Files<CR>$/;"	m
+<leader>n	init.vim	/^nnoremap <leader>n :NERDTreeFocus<CR>$/;"	m
+<leader>x	init.vim	/^xmap <leader>x  <Plug>(coc-convert-snippet)$/;"	m
+CheckBackSpace	init.vim	/^function! CheckBackSpace() abort$/;"	f
+CheckBackspace	init.vim	/^function! CheckBackspace() abort$/;"	f
+[g	init.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
+]g	init.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
+args	coc-settings.json	/^      "args": ["--lsp"],$/;"	a	object:languageserver.haskell
+command	coc-settings.json	/^      "command": "haskell-language-server-wrapper",$/;"	s	object:languageserver.haskell
+filetypes	coc-settings.json	/^      "filetypes": ["haskell", "lhaskell"]$/;"	a	object:languageserver.haskell
+g:coc_snippet_next	init.vim	/^let g:coc_snippet_next = '<c-j>'$/;"	v
+g:coc_snippet_next	init.vim	/^let g:coc_snippet_next = '<tab>'$/;"	v
+g:coc_snippet_prev	init.vim	/^let g:coc_snippet_prev = '<c-k>'$/;"	v
+g:rainbow_active	init.vim	/^let g:rainbow_active = 1$/;"	v
+g:startify_bookmarks	init.vim	/^let g:startify_bookmarks = [$/;"	v
+gd	init.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
+gi	init.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
+gr	init.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
+gy	init.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
+haskell	coc-settings.json	/^    "haskell": {$/;"	o	object:languageserver
+languageserver	coc-settings.json	/^  "languageserver": {$/;"	o
+rootPatterns	coc-settings.json	/^      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],$/;"	a	object:languageserver.haskell
