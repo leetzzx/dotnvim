@@ -1,5 +1,8 @@
 call plug#begin()
 Plug 'leafOfTree/vim-vue-plugin'
+Plug 'gaoDean/autolist.nvim'
+Plug 'tpope/vim-surround'
+Plug 'terryma/vim-expand-region'
 Plug 'folke/which-key.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'numToStr/Comment.nvim'
@@ -13,6 +16,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'othree/html5.vim'
 Plug 'sickill/vim-monokai'
 Plug 'mattn/emmet-vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'manzeloth/live-server'
+Plug 'ap/vim-css-color'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ludovicchabant/vim-gutentags'
@@ -141,3 +148,11 @@ let g:startify_lists = [
       \ { 'header': ['   MRU'],            'type': 'files' },
       \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
       \ ]
+
+" expand region
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
+
+lua << EOF
+require('autolist').setup({})
+EOF
