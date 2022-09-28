@@ -49,6 +49,8 @@
 <leader>x	init.vim	/^xmap <leader>x  <Plug>(coc-convert-snippet)$/;"	m
 CheckBackSpace	init.vim	/^function! CheckBackSpace() abort$/;"	f
 CheckBackspace	init.vim	/^function! CheckBackspace() abort$/;"	f
+J	init.vim	/^map J <Plug>(expand_region_shrink)$/;"	m
+K	init.vim	/^map K <Plug>(expand_region_expand)$/;"	m
 [g	init.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
 ]g	init.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
 args	coc-settings.json	/^      "args": ["--lsp"],$/;"	a	object:languageserver.haskell
@@ -59,6 +61,7 @@ g:coc_snippet_next	init.vim	/^let g:coc_snippet_next = '<tab>'$/;"	v
 g:coc_snippet_prev	init.vim	/^let g:coc_snippet_prev = '<c-k>'$/;"	v
 g:rainbow_active	init.vim	/^let g:rainbow_active = 1$/;"	v
 g:startify_bookmarks	init.vim	/^let g:startify_bookmarks = [$/;"	v
+g:startify_lists	init.vim	/^let g:startify_lists = [$/;"	v
 gd	init.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
 gi	init.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
 gr	init.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
