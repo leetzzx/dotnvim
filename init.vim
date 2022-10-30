@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'leafOfTree/vim-vue-plugin'
+Plug 'honza/vim-snippets'
 Plug 'gaoDean/autolist.nvim'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-expand-region'
